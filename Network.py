@@ -38,40 +38,11 @@ class Network(object):
             c = Couche(self.nb_unit_par_couche[i + 1], self.nb_unit_par_couche[i], self.acti_type)
             self.couches[i] += c.build()
 
-        # demande si on défini des poids (0 si pas indiqué)
-        question = ""
-        while all(c not in question for c in ("o", "n")):
-            question = input("Voulez-vous définir les poids? (o/n) ")
-
-        # défini chaque poids
-        if "o" in question:
-            for i in range(self.nb_couches):  # Passe a chaque couche
-                for j in range(self.nb_unit_par_couche[i + 1]):  # Passe par chaque unité de cette couche
-                    for k in range(self.nb_unit_par_couche[i] + 1):
-                        weight_val = "x"
-                        while not isinstance(weight_val, float):
-                            if k is 0:
-                                weight_val = input(
-                                    "valeur du biais de l'unité " + str(j + 1) + " de la couche " + str(i + 1) + " : ")
-                            else:
-                                weight_val = input(
-                                    "valeur pour le poids " + str(k) + " de l'unité " + str(
-                                        j + 1) + " de la couche " + str(
-                                        i + 1) + " : ")
-
-                            try:
-                                weight_val = float(weight_val)
-                            except ValueError:
-                                print("Entrez un float")
-
-                        self.couches[i][j].weights[k] = weight_val
-
-        if "n" in question:
-            for i in range(self.nb_couches):  # Passe a chaque couche
-                for j in range(self.nb_unit_par_couche[i + 1]):  # Passe par chaque unité de cette couche
-                    for k in range(self.nb_unit_par_couche[i] + 1):
-                        weight_val = randint(-5, 5)
-                        self.couches[i][j].weights[k] = float(weight_val)
+        for i in range(self.nb_couches):  # Passe a chaque couche
+            for j in range(self.nb_unit_par_couche[i + 1]):  # Passe par chaque unité de cette couche
+                for k in range(self.nb_unit_par_couche[i] + 1):
+                    weight_val = randint(-5, 5)
+                    self.couches[i][j].weights[k] = float(weight_val)
 
     def predict(self):
         for j in range(self.nb_unit_par_couche[1]):  # Passe par chaque unité de la 1ere couche

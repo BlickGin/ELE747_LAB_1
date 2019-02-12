@@ -43,9 +43,6 @@ n.acti_type = ACTI_TYPE_SIGMOID
 
 n.setup()
 n.init()
-save(n)
-
-n2 = load()
 
 
 
