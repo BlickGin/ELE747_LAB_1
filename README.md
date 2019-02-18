@@ -1,18 +1,32 @@
 # Laboratoire : MLP
 
-One Paragraph of project description goes here
+Ce projet est le second laboratoire du cours ELE-767 : Apprentissage machine en intelligence artificielle. L'objectif est de créer,
+entraîner et tester un perceptron multicouche pour que celui-ci puisse identifier des sons produits par la voix humaines. Ces sons
+sont des chiffres de 1 à 10 qui doivent être traités par le programme et identifiés selon le chiffre audible.
 
-## Obtiention de programme
+## Fonctionnement général
+
+### Perceptron multicouche
+
+### Données d'identification d'un son
+
+## Obtention du programme
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prérequis
 
-What things you need to install the software and how to install them
+#### Python 3.5
 
-```
-Give examples
-```
+#### Pip
+
+#### Numpy
+
+#### Pickle
+
+#### Tkinter
+
+#### Pygubu
 
 ### Installation
 
