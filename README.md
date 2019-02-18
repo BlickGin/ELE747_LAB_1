@@ -46,7 +46,7 @@ Pygubu
 
 ## Authors
 
-* **André-Philippe Audette** 
+* **André-Philippe Audette** AUDA03029201
 
 
 
