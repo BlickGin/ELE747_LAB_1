@@ -16,17 +16,29 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prérequis
 
-#### Python 3.5
+```
+Python 3.5
+```
 
-#### Pip
+```
+PIP
+```
 
-#### Numpy
+```
+Numpy
+```
 
-#### Pickle
+```
+Pickle
+```
 
-#### Tkinter
+```
+Tkinter
+```
 
-#### Pygubu
+```
+Pygubu
+```
 
 ### Installation
 
@@ -50,28 +62,10 @@ End with an example of getting some data out of the system or using it for a lit
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
-
-
-
-## Contributing
-
-
-
-## Versioning
-
-
-
 ## Authors
 
 * **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-
-
-## Acknowledgments
 
 
