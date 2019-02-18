@@ -17,7 +17,7 @@ sont des chiffres de 1 à 10 qui doivent être traités par le programme et iden
 ### Prérequis
 
 ```
-Python 3.5
+[Python 3.5](https://www.python.org/downloads/release/python-370/)
 ```
 
 ```
