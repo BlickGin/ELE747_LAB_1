@@ -10,12 +10,14 @@ import pickle
 
 class Network(object):
     def __init__(self):
+        self.name = ""
         self.nb_unit_par_couche = []
         self.nb_couches = 0
         self.couches = []
         self.inputs = []
         self.outputs = []
         self.acti_type = ''
+        self.error_count = []
 
     def setup(self):
         self.nb_couches = int(input("Nombre de couches : "))
