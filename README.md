@@ -16,29 +16,29 @@ sont des chiffres de 1 à 10 qui doivent être traités par le programme et iden
 
 ### Prérequis
 
+```
+Python 3.5
+```
 
-  -[Python 3.5](https://www.python.org/downloads/release/python-370/)
+```
+PIP
+```
 
+```
+Numpy
+```
 
-  
-  -[PIP](https://pypi.org/project/pip/)
+```
+Pickle
+```
 
+```
+Tkinter
+```
 
-
-  -[Numpy](https://pypi.org/project/numpy/)
-
-
-
-  -[Pickle](https://pypi.org/project/pickle5/)
-
-
-
-  -[Tkinter](https://pypi.org/project/tkinter3000/)
-  
-
-
-  -[Pygubu](https://pypi.org/project/pygubu/)
-
+```
+Pygubu
+```
 
 ### Installation
 
