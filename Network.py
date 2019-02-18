@@ -1,5 +1,5 @@
 import numpy as np
-from src.Couches import *
+from Couches import *
 from random import randint
 
 

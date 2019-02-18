@@ -1,6 +1,6 @@
-from src.Network import *
-from src.Defines import *
-from src.Dataset import *
+from Network import *
+from Defines import *
+from Dataset import *
 from random import shuffle
 
 # from Gui import *

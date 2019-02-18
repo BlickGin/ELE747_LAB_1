@@ -1,4 +1,4 @@
-from src.Activation import *
+from Activation import *
 
 
 class Unit(object):

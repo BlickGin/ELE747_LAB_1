@@ -1,7 +1,7 @@
 import tkinter as tk
 import pygubu
-from src.save_load import *
-from src.Network import *
+from save_load import *
+from Network import *
 
 
 class Dialog:
