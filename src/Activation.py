@@ -1,6 +1,5 @@
 import numpy as np
-import math
-from Defines import *
+from src.Defines import *
 
 
 ########################################################################################################################

@@ -1,12 +1,9 @@
-import numpy as np
-from Network import *
-from Defines import *
-from Dataset import *
+from src.Network import *
+from src.Defines import *
+from src.Dataset import *
 from random import shuffle
-from save_load import *
+
 # from Gui import *
-from tkinter import *
-from tkinter import filedialog
 
 # save = Tk()
 # save.withdraw()

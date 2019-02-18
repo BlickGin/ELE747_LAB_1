@@ -12,9 +12,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib import figure
 from matplotlib import axes
 import pygubu
-import pickle
-from save_load import *
-from Network import *
+from src.save_load import *
+from src.Network import *
 
 
 class Dialog:
