@@ -1,8 +1,7 @@
 import tkinter as tk
 import pygubu
-import pickle
-from save_load import *
-from Network import *
+from src.save_load import *
+from src.Network import *
 
 
 class Dialog:

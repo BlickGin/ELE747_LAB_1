@@ -1,6 +1,4 @@
-import numpy as np
-import math
-from Unit import Unit
+from src.Unit import Unit
 
 
 class Couche(object):
