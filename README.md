@@ -10,6 +10,8 @@ sont des chiffres de 1 à 10 qui doivent être traités par le programme et iden
 
 ### Données d'identification d'un son
 
+### Validation 
+
 ## Obtention du programme
 
 ### Prérequis
@@ -44,9 +46,9 @@ Pygubu
 ## Déploiment
 
 
-## Authors
+## Auteurs
 
-* **André-Philippe Audette** AUDA03029201
-
-
+* **André-Philippe Audette**
+* **André-Philippe Audette**
+* **André-Philippe Audette**
 
