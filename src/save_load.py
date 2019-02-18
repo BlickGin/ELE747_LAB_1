@@ -1,10 +1,3 @@
-import numpy as np
-from Network import *
-from Defines import *
-from Dataset import *
-from random import shuffle
-
-
 def save(net_to_save, filename):
     with open(filename, 'wb') as output:
         pickle.dump(net_to_save, output, pickle.HIGHEST_PROTOCOL)

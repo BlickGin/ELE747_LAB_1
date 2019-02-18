@@ -1,6 +1,4 @@
-import numpy as np
-import math
-from Activation import *
+from src.Activation import *
 
 
 class Unit(object):

@@ -1,11 +1,6 @@
 import numpy as np
-from Unit import Unit
-from Couches import *
-from graphics import *
+from src.Couches import *
 from random import randint
-from tkinter import *
-from tkinter import filedialog
-import pickle
 
 
 class Network(object):
