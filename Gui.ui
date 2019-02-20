@@ -83,6 +83,7 @@
               <object class="tk.Listbox" id="Network_list">
                 <property name="relief">flat</property>
                 <property name="selectmode">single</property>
+                <property name="takefocus">false</property>
                 <property name="width">50</property>
                 <layout>
                   <property name="column">0</property>
@@ -363,7 +364,8 @@
     <child>
       <object class="ttk.Menubutton" id="Acti_Type_Menu_Button">
         <property name="direction">below</property>
-        <property name="text" translatable="yes">Select</property>
+        <property name="takefocus">true</property>
+        <property name="textvariable">string:Acti</property>
         <layout>
           <property name="column">0</property>
           <property name="propagate">True</property>
@@ -371,53 +373,68 @@
         </layout>
         <child>
           <object class="tk.Menu" id="Acti_Type_Menu">
+            <property name="tearoff">false</property>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_0">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">Sigmoid</property>
-                <property name="value">0</property>
+                <property name="value">Sigmoid</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_1">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">Hyperbolic Tan</property>
-                <property name="value">1</property>
+                <property name="value">Hyperbolic Tan</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_2">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">Sinusoid</property>
-                <property name="value">2</property>
+                <property name="value">Sinusoid</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_3">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">Step</property>
-                <property name="value">3</property>
+                <property name="value">Step</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_4">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">Ramp</property>
-                <property name="value">4</property>
+                <property name="value">Ramp</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_5">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">RELU</property>
-                <property name="value">5</property>
+                <property name="value">RELU</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
             <child>
               <object class="tk.Menuitem.Radiobutton" id="Acti_Type_6">
-                <property name="command_id_arg">false</property>
+                <property name="command">on_Acti</property>
+                <property name="command_id_arg">true</property>
                 <property name="label" translatable="yes">Gaussian</property>
-                <property name="value">6</property>
+                <property name="value">Gaussian</property>
+                <property name="variable">string:Acti</property>
               </object>
             </child>
           </object>

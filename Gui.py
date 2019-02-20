@@ -56,10 +56,13 @@ class Application:
 
         self.builder2 = builder2 = pygubu.Builder()
         self.builder2.add_from_file('Gui.ui')
+        self.frame_3 = None
 
         self.mainwindow = builder.get_object('Toplevel_2', master)
         builder.connect_callbacks(self)
         master.protocol("WM_DELETE_WINDOW", self.on_close_window)
+
+        self.selected_acti_type = 0
 
         # Gère la sélection d'un item dans la liste
         def curselect(event):
@@ -107,9 +110,12 @@ class Application:
         exit()
 
     def on_new_network_click(self):
+        self.builder2 = builder2 = pygubu.Builder()
+        self.builder2.add_from_file('Gui.ui')
         top3 = tk.Toplevel(self.mainwindow)
+        self.selected_acti_type = None
 
-        frame3 = self.builder2.get_object('New_Network_Window', top3)
+        self.frame_3 = self.builder2.get_object('New_Network_Window', top3)
         self.builder2.connect_callbacks(self)
 
     def on_ok_click(self):
@@ -126,22 +132,21 @@ class Application:
         nb_unit_per_layer_entry = self.builder2.get_object('Number_Of_Unit_Entry')
         nb_input_entry = self.builder2.get_object('Number_Of_Inputs_Entry')
         nb_output_entry = self.builder2.get_object('Number_Of_Outputs_Entry')
-        acti_type_entry = self.builder2.get_object('Acti_Type_Menu_Button')
+
         name_input = name_input_entry.get()
         nb_layers = nb_layers_entry.get()
         nb_unit_per_layer = nb_unit_per_layer_entry.get()
         nb_input = nb_input_entry.get()
         nb_output = nb_output_entry.get()
-        acti_type = acti_type_entry.selection_get()
-        print(acti_type)
+        acti_type = self.selected_acti_type
 
         nb_unit_per_layer = nb_unit_per_layer.split(",")
 
         try:
             nb_layers = int(nb_layers)
             try:
-                for i in nb_unit_per_layer:
-                    i = int(i)
+                for i in range(len(nb_unit_per_layer)):
+                    nb_unit_per_layer[i] = int(nb_unit_per_layer[i])
                 try:
                     nb_input = int(nb_input)
                     try:
@@ -163,92 +168,54 @@ class Application:
                                        "Please enter exactly " + str(nb_layers) + " layers in number of layers")
             elif name_input is "":
                 messagebox.showwarning("Wrong Type Entry", "Please enter a name")
+            elif self.selected_acti_type is None:
+                messagebox.showwarning("Wrong Type Entry", "Please select an activation")
             else:
-                print("OK")
-    # def on_new_network_click(self):
-    #     d = Dialog(root, "Nom")
-    #     root.wait_window(d.top)
-    #     name = d.return_value
-    #     val = None
-    #     while type(val) is not int:
-    #         d = Dialog(root, "Nombre de couches")
-    #         root.wait_window(d.top)
-    #         try:
-    #             val = int(d.return_value)
-    #         except ValueError:
-    #             val = None
-    #
-    #     nb_couches = int(val)
-    #     nb_unit_par_couche = []
-    #     val = None
-    #     for i in range(nb_couches + 1):
-    #         if i == 0:
-    #             while type(val) is not int:
-    #                 d = Dialog(root, "Nombre d'entrées")
-    #                 root.wait_window(d.top)
-    #                 try:
-    #                     val = int(d.return_value)
-    #                 except ValueError:
-    #                     val = None
-    #             nb_unit_par_couche.append(val)
-    #             val = None
-    #         else:
-    #             if i is nb_couches:
-    #                 txt = "Nombre d'unités à la couche " + str(i) + " (Sortie)"
-    #                 while type(val) is not int:
-    #                     d = Dialog(root, txt)
-    #                     root.wait_window(d.top)
-    #                     try:
-    #                         val = int(d.return_value)
-    #                     except ValueError:
-    #                         val = None
-    #
-    #                 nb_unit_par_couche.append(val)
-    #                 val = None
-    #             else:
-    #                 txt = "Nombre d'unités à la couche " + str(i)
-    #                 while type(val) is not int:
-    #                     d = Dialog(root, txt)
-    #                     root.wait_window(d.top)
-    #                     try:
-    #                         val = int(d.return_value)
-    #                     except ValueError:
-    #                         val = None
-    #                 nb_unit_par_couche.append(val)
-    #                 val = None
-    #
-    #     d = Dialog(root, "Activation Type (Enter number between 1 and 7) \n"
-    #                      "0 : SIGMOID\n"
-    #                      "1 : TANH\n"
-    #                      "2 : SIN\n"
-    #                      "3 : STEP\n"
-    #                      "4 : RAMP\n"
-    #                      "5 : RELU\n"
-    #                      "6 : GAUSS")
-    #     root.wait_window(d.top)
-    #     acti = d.return_value
-    #
-    #     net = Network()
-    #     net.nb_unit_par_couche = nb_unit_par_couche
-    #     net.nb_couches = nb_couches
-    #     net.acti_type = acti
-    #     net.name = name
-    #
-    #     net.init()
-    #     self.nb_of_networks += 1
-    #     fname = "Network_" + str(self.nb_of_networks) + ".pkl"
-    #     self.list_of_networks += [fname]
-    #     save(net, fname)
-    #     save(self.list_of_networks, self.list_of_networks_name)
-    #
-    #     self.networks_listbox.delete(0, tk.END)
-    #     self.networks_listbox.select_clear(tk.END)
-    #     for i in range(self.nb_of_networks):
-    #         text = self.list_of_networks[i]
-    #         self.networks_listbox.insert(tk.END, text)
-    #     self.networks_listbox.see(tk.END)
-    #     self.networks_listbox.selection_set(tk.END)
+                print(name_input)
+                print(nb_layers)
+                print(nb_unit_per_layer)
+                print(nb_input)
+                print(nb_output)
+                print(acti_type)
+                net = Network()
+                net.name = name_input
+                net.nb_unit_par_couche = nb_unit_per_layer
+                net.nb_unit_par_couche.insert(0, nb_input)
+                net.nb_couches = nb_layers
+                net.acti_type = self.selected_acti_type
 
+                net.init()
+                self.nb_of_networks += 1
+                fname = "Network_" + str(self.nb_of_networks) + ".pkl"
+                self.list_of_networks[fname] = name_input
+                save(net, fname)
+                save(self.list_of_networks, self.list_of_networks_name)
+
+                self.networks_listbox.delete(0, tk.END)
+                self.networks_listbox.select_clear(tk.END)
+                for i in self.list_of_networks:
+                    text = i
+                    self.networks_listbox.insert(tk.END, text)
+                self.networks_listbox.see(tk.END)
+                self.networks_listbox.selection_set(tk.END)
+
+                self.frame_3.master.destroy()
+
+    def on_Acti(self, selection):
+        if selection == 'Acti_Type_0':
+            self.selected_acti_type = ACTI_TYPE_SIGMOID
+        elif selection == 'Acti_Type_1':
+            self.selected_acti_type = ACTI_TYPE_TANH
+        elif selection == 'Acti_Type_2':
+            self.selected_acti_type = ACTI_TYPE_SIN
+        elif selection == 'Acti_Type_3':
+            self.selected_acti_type = ACTI_TYPE_STEP
+        elif selection == 'Acti_Type_4':
+            self.selected_acti_type = ACTI_TYPE_RAMP
+        elif selection == 'Acti_Type_5':
+            self.selected_acti_type = ACTI_TYPE_RELU
+        elif selection == 'Acti_Type_6':
+            self.selected_acti_type = ACTI_TYPE_GAUSS
 
 if __name__ == '__main__':
     root = tk.Tk()
