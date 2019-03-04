@@ -24,10 +24,19 @@ Donc la donnée du son 'one' (1:) possède :
         
 Et ce sur 60 cadres d'analyse.
 
-On peut alors définir un premier vecteur d'entrée X
+On peut alors définir un premier vecteur d'entrée X. 
+
+On suppose d'abord qu'on utilise toutes les données dans le vecteur d'entrée on a alors un vecteur de 26 données multiplier par 60 cadres d'analyse ce qui donne 1560 données dans le vecteur X.
 
 ### Validation 
 
+Pour valider l'entrainement du réseau de neuronnes on utilise trois types de données
+1. Les données d'entrainement.
+* Ces données servent à entrainé le réseau on peut les utilisés comme première approximation de l'apprentissage du réseau, par contre
+on doit utilisé d'autre donnés pour la validation afin d'éviter le surapprentissage.
+2. Les données de validation croisée.
+* Ces données sont différentes des données d'apprentissage et permettent de déduire un apprentissage réel du réseau.
+3. Les données de test.
 ## Obtention du programme
 
 ### Prérequis
