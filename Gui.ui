@@ -150,6 +150,7 @@
         </layout>
         <child>
           <object class="ttk.Button" id="learn">
+            <property name="command">on_click_learn_button</property>
             <property name="text" translatable="yes">Start Learning</property>
             <property name="width">20</property>
             <layout>
@@ -301,8 +302,8 @@
       </object>
     </child>
     <child>
-      <object class="ttk.Label" id="Number_Of_Outputs">
-        <property name="text" translatable="yes">Number of outputs</property>
+      <object class="ttk.Label" id="Data_File">
+        <property name="text" translatable="yes">Path to data file</property>
         <layout>
           <property name="column">1</property>
           <property name="propagate">True</property>
@@ -311,7 +312,8 @@
       </object>
     </child>
     <child>
-      <object class="ttk.Entry" id="Number_Of_Outputs_Entry">
+      <object class="pygubu.builder.widgets.pathchooserinput" id="Data_File_Input">
+        <property name="type">directory</property>
         <layout>
           <property name="column">1</property>
           <property name="propagate">True</property>

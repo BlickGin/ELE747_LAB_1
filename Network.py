@@ -18,6 +18,7 @@ class Network(object):
         self.outputs = []
         self.acti_type = ''
         self.error_count = []
+        self.datafile = ""
 
     def setup(self):
         self.nb_couches = int(input("Nombre de couches : "))

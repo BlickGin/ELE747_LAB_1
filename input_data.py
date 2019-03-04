@@ -1,4 +1,5 @@
 import time
+import Defines
 
 nb2output = {0.0: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
              1.0: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -13,10 +14,8 @@ nb2output = {0.0: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 
 def readfile(filename, choix):
 
-
-    #choix/ 1240: statiques/40 ; 1250: statiques/50 ; 1260: statiques/60 ; 2640: tous/40; 2650: tous/50; 2660: tous/60;
+    # choix/ 1240: statiques/40 ; 1250: statiques/50 ; 1260: statiques/60 ; 2640: tous/40; 2650: tous/50; 2660: tous/60;
     data = []
-
 
     for line in open(filename):
         csv_row = line.split(";")

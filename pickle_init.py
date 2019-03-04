@@ -11,6 +11,8 @@ net.nb_unit_par_couche = [2, 2, 1]
 net.nb_couches = 2
 net.acti_type = ACTI_TYPE_SIGMOID
 net.name = name
+net.datafile = "None"
+
 
 net.init()
 
