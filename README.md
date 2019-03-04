@@ -67,7 +67,9 @@ Pour valider l'entrainement du réseau de neuronnes on utilise trois types de do
 
   * [Pygubu](https://pypi.org/project/pygubu/)
   
-  * [matplotlib](https://matplotlib.org/)
+  
+  
+  * [Matplotlib](https://matplotlib.org/)
 
 
 ### Installation
