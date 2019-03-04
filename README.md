@@ -42,6 +42,7 @@ Pour valider l'entrainement du réseau de neuronnes on utilise trois types de do
     * Une fois que l'on juge l'apprentissage du réseau suffisant, on le test sur des données de tests qui sont différentes de celles de la validation croisée et de l'apprentissage.
 ## Obtention du programme
 
+
 ### Prérequis
 
 
