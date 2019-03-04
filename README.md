@@ -14,7 +14,7 @@ Le perceptron multicouche permet de résoudre les relations entre l'entrée et l
 
 Les données utilisées pour représenter un son de la voix humaines sont des fichiers de texte. Où chaque ligne du fichier représente un son selon le format suivant : 
 
-<p>1: S1 S2 .. S11 S12 ES1 D1 D2 .. D11 D12 ED1</p>
+&lt;p&gt;1: S1 S2 .. S11 S12 ES1 D1 D2 .. D11 D12 ED1&lt;/p&gt;
 
 
 ### Validation 
