@@ -6,7 +6,7 @@ from Activation import *
 class Unit(object):
     nb_unit = 0
 
-    def __init__(self, nb_input, couche, acti_type, learning_rate=0.5):
+    def __init__(self, nb_input, couche, acti_type, learning_rate=0.1):
         self.nb_input = nb_input
         self.couche = couche
         self.acti_type = acti_type
