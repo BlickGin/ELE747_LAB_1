@@ -1,6 +1,6 @@
 import numpy as np
 from Couches import *
-from random import randint
+#from random import randint
 
 
 class Network(object):
@@ -39,7 +39,7 @@ class Network(object):
         for i in range(self.nb_couches):  # Passe a chaque couche
             for j in range(self.nb_unit_par_couche[i + 1]):  # Passe par chaque unité de cette couche
                 for k in range(self.nb_unit_par_couche[i] + 1):
-                    weight_val = randint(-5, 5)
+                    weight_val = np.random.random()*0.2 - 0.1
                     self.couches[i][j].weights[k] = float(weight_val)
 
     def predict(self):

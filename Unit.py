@@ -1,3 +1,5 @@
+import numpy
+
 from Activation import *
 
 
@@ -16,13 +18,15 @@ class Unit(object):
 
         Unit.nb_unit += 1
 
+
     def unit_info(self):
         print("Appartient à la couche : ", self.couche)
         print("nb d'entrées : ", self.nb_input)
         print("poids : ", self.weights)
 
     def predict(self, inputs):
-        self.summation = np.dot(inputs, self.weights[1:]) + self.weights[0]  # Multiplie les entrées avec le poids corresp.
+        self.summation = np.dot(inputs, self.weights[1:]) + self.weights[
+            0]  # Multiplie les entrées avec le poids corresp.
         activation = activate(self.acti_type, self.summation)
         self.acti = activation
 

@@ -19,5 +19,5 @@ class Couche(object):
         c = []
         for _ in range(self.nb_unit):
             c += [Unit(self.nb_unit_couche_prec, self.couche_id, self.acti_type)]
-
+            c[_].unit_info()
         return c
