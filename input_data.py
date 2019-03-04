@@ -27,6 +27,7 @@ def readfile(filename, choix):
     random.shuffle(data)
     return data
 
+#push successful
 
 def organise_tableau_lab2(row_data, choix):
 
