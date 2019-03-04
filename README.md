@@ -17,12 +17,14 @@ Les données utilisées pour représenter un son de la voix humaines sont des fi
 <p align="center">1: (S1 S2 .. S11 S12 ES1 D1 D2 .. D11 D12 ED1) x60</p>
         
 Donc la donnée du son 'one' (1:) possède : 
-        * 12 valeurs d'amplitudes statiques
-        * 1  valeur d'énergie statique
-        * 12 valeurs d'amplitudes dynamique
-        * 1 valeurs d'énergie dynamique
+* 12 valeurs d'amplitudes statiques
+* 1  valeur d'énergie statique
+* 12 valeurs d'amplitudes dynamique
+* 1 valeurs d'énergie dynamique
         
 Et ce sur 60 cadres d'analyse.
+
+On peut alors définir un premier vecteur d'entrée X
 
 ### Validation 
 
