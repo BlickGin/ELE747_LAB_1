@@ -35,7 +35,7 @@ from tkinter import filedialog
 # f.close()
 
 
-nb_epoch = 1000
+nb_epoch = 1
 
 n = Network()
 # d = Drawing(n)
