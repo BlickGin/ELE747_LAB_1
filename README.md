@@ -8,7 +8,13 @@ sont des chiffres de 1 à 10 qui doivent être traités par le programme et iden
 
 ### Perceptron multicouche
 
+Le perceptron multicouche permet de résoudre les relations entre l'entrée et la sortie pour des système non-linéairement séparable. Le principe est de créer un réseau de neuronnes réparties sur plusieurs couches pour transformer un vecteur d'entrée X en un vecteur de sortie Y de dimension moindre. 
+
 ### Données d'identification d'un son
+
+Les données utilisées pour représenter un son de la voix humaines sont des fichiers de texte. Où chaque ligne du fichier représente un son selon le format suivant : 
+
+*1: S1 S2 .. S11 S12 ES1 D1 D2 .. D11 D12 ED1
 
 ### Validation 
 
