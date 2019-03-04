@@ -32,9 +32,9 @@ On suppose d'abord qu'on utilise toutes les données dans le vecteur d'entrée o
 
 Pour valider l'entrainement du réseau de neuronnes on utilise trois types de données
 1. Les données d'entrainement.
-* Ces données servent à entrainé le réseau on peut les utilisés comme première approximation de l'apprentissage du réseau, par contre on doit utilisé d'autre donnés pour la validation afin d'éviter le surapprentissage.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Ces données servent à entrainé le réseau on peut les utilisés comme première approximation de l'apprentissage du réseau, par contre on doit utilisé d'autre donnés pour la validation afin d'éviter le surapprentissage.
 2. Les données de validation croisée.
-* Ces données sont différentes des données d'apprentissage et permettent de déduire un apprentissage réel du réseau.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Ces données sont différentes des données d'apprentissage et permettent de déduire un apprentissage réel du réseau.
 3. Les données de test.
 ## Obtention du programme
 
