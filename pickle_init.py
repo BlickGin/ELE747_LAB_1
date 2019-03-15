@@ -5,7 +5,7 @@ from Defines import *
 import pickle
 
 dict_of_networks = {}
-name = "Static 40 test A"
+name = "Test 1A (Static 40 SIG 2 layers)"
 net = Network()
 net.nb_unit_par_couche = [480, 240, 10]
 net.nb_couches = 2
