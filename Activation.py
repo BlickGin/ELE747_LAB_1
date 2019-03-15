@@ -49,7 +49,8 @@ def prim_activate(type, input_sum):
         acti = activate(ACTI_TYPE_SIGMOID, input_sum) * (1 - activate(ACTI_TYPE_SIGMOID, input_sum))
 
     elif type is ACTI_TYPE_TANH:
-        acti = 1 - (activate(ACTI_TYPE_TANH, input_sum) ^ 2)
+        acti = activate(ACTI_TYPE_TANH, input_sum)
+        acti = 1 - (acti*acti)
 
     elif type is ACTI_TYPE_SIN:
         acti = np.cos(input_sum)

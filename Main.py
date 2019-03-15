@@ -36,11 +36,11 @@ from tkinter import filedialog
 # f.close()
 
 
-nb_epoch = 1
+nb_epoch = 10
 
 n = Network()
 # d = Drawing(n)
-n.acti_type = ACTI_TYPE_STEP
+n.acti_type = ACTI_TYPE_SIGMOID
 
 n.setup()
 n.init()
@@ -61,6 +61,7 @@ print("finished reading")
 #
 for i in range(nb_epoch):
         error = 0
+        count = 1
         for j in shuffled_input_train:
             n.inputs = j[1:]
             n.outputs = j[0]
@@ -68,12 +69,21 @@ for i in range(nb_epoch):
             n.train()
             # print("in : " + str(j) + " / out : " + str(n.couches[-1][0].acti) + ", " + str(n.couches[-1][1].acti) +
             #       " / (expexted " + str(n.outputs) + ")")
-            out = [n.couches[-1][0].acti, n.couches[-1][1].acti]
+            out = []
+            for h in range(10):
+                out.append(n.couches[-1][h].acti)
 
             if out.index(max(out)) is not n.outputs.index(max(n.outputs)):
                 error += 1
-            print("Trainig succesful, weight: ")
+            # print("Trainig succesful, weight: ")
+            print(str(count) + " / " + str(len(shuffled_input_train)))
+            count += 1
+
         print(str(i) + " : " + str(error))
+
+        print(n.outputs)
+        print(out)
+        random.shuffle(shuffled_input_train)
 #
 #         # if i % 50 is 0:
 #         #     d.win.flush()

@@ -40,8 +40,9 @@ class Unit(object):
 
         return self.delta
 
-    def update_weights(self, prev_input):
+    def update_weights(self, prev_input, epoch):
         for i in range(len(self.weights)):
+            self.learning_rate = self.learning_rate * np.exp(-0.1 * epoch)
             delta_weight = (self.learning_rate * self.delta * prev_input[i])
             self.weights[i] = self.weights[i] + delta_weight
 

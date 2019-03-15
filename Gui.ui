@@ -163,6 +163,7 @@
         </child>
         <child>
           <object class="ttk.Button" id="test">
+            <property name="command">on_click_test_button</property>
             <property name="text" translatable="yes">Start Testing</property>
             <property name="width">20</property>
             <layout>
@@ -273,16 +274,6 @@
       </object>
     </child>
     <child>
-      <object class="ttk.Entry" id="Number_Of_Unit_Entry">
-        <layout>
-          <property name="column">1</property>
-          <property name="padx">10</property>
-          <property name="propagate">True</property>
-          <property name="row">3</property>
-        </layout>
-      </object>
-    </child>
-    <child>
       <object class="ttk.Label" id="Number_Of_Inputs">
         <property name="text" translatable="yes">Number of inputs</property>
         <layout>
@@ -293,31 +284,11 @@
       </object>
     </child>
     <child>
-      <object class="ttk.Entry" id="Number_Of_Inputs_Entry">
-        <layout>
-          <property name="column">0</property>
-          <property name="propagate">True</property>
-          <property name="row">5</property>
-        </layout>
-      </object>
-    </child>
-    <child>
-      <object class="ttk.Label" id="Data_File">
-        <property name="text" translatable="yes">Path to data file</property>
+      <object class="ttk.Entry" id="Number_Of_Unit_Entry">
         <layout>
           <property name="column">1</property>
           <property name="propagate">True</property>
-          <property name="row">4</property>
-        </layout>
-      </object>
-    </child>
-    <child>
-      <object class="pygubu.builder.widgets.pathchooserinput" id="Data_File_Input">
-        <property name="type">directory</property>
-        <layout>
-          <property name="column">1</property>
-          <property name="propagate">True</property>
-          <property name="row">5</property>
+          <property name="row">3</property>
         </layout>
       </object>
     </child>
@@ -328,26 +299,6 @@
           <property name="column">0</property>
           <property name="propagate">True</property>
           <property name="row">6</property>
-        </layout>
-      </object>
-    </child>
-    <child>
-      <object class="ttk.Separator" id="Separator_1">
-        <property name="orient">horizontal</property>
-        <layout>
-          <property name="column">0</property>
-          <property name="propagate">True</property>
-          <property name="row">1</property>
-        </layout>
-      </object>
-    </child>
-    <child>
-      <object class="ttk.Separator" id="Separator_2">
-        <property name="orient">horizontal</property>
-        <layout>
-          <property name="column">1</property>
-          <property name="propagate">True</property>
-          <property name="row">1</property>
         </layout>
       </object>
     </child>
@@ -437,6 +388,76 @@
                 <property name="label" translatable="yes">Gaussian</property>
                 <property name="value">Gaussian</property>
                 <property name="variable">string:Acti</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Menubutton" id="Number_Of_Inputs_Menu_Button">
+        <property name="direction">below</property>
+        <property name="textvariable">string:input_type</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">5</property>
+        </layout>
+        <child>
+          <object class="tk.Menu" id="Number_Of_Inputs_Menu">
+            <property name="tearoff">false</property>
+            <child>
+              <object class="tk.Menuitem.Radiobutton" id="Input_Type_1">
+                <property name="command">on_selected_entry</property>
+                <property name="command_id_arg">true</property>
+                <property name="label" translatable="yes">Static with 40 data</property>
+                <property name="value">Static with 40 data</property>
+                <property name="variable">string:input_type</property>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Radiobutton" id="Input_Type_2">
+                <property name="command">on_selected_entry</property>
+                <property name="command_id_arg">true</property>
+                <property name="label" translatable="yes">Static with 50 data</property>
+                <property name="value">Static with 50 data</property>
+                <property name="variable">string:input_type</property>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Radiobutton" id="Input_Type_3">
+                <property name="command">on_selected_entry</property>
+                <property name="command_id_arg">true</property>
+                <property name="label" translatable="yes">Static with 60 data</property>
+                <property name="value">Static with 60 data</property>
+                <property name="variable">string:input_type</property>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Radiobutton" id="Input_Type_4">
+                <property name="command">on_selected_entry</property>
+                <property name="command_id_arg">true</property>
+                <property name="label" translatable="yes">Dynamic with 40 data</property>
+                <property name="value">Dynamic with 40 data</property>
+                <property name="variable">string:input_type</property>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Radiobutton" id="Input_Type_5">
+                <property name="command">on_selected_entry</property>
+                <property name="command_id_arg">true</property>
+                <property name="label" translatable="yes">Dynamic with 50 data</property>
+                <property name="value">Dynamic with 50 data</property>
+                <property name="variable">string:input_type</property>
+              </object>
+            </child>
+            <child>
+              <object class="tk.Menuitem.Radiobutton" id="Input_Type_6">
+                <property name="command">on_selected_entry</property>
+                <property name="command_id_arg">true</property>
+                <property name="label" translatable="yes">Dynamic with 60 data</property>
+                <property name="value">Dynamic with 60 data</property>
+                <property name="variable">string:input_type</property>
               </object>
             </child>
           </object>

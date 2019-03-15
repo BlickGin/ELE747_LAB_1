@@ -18,7 +18,8 @@ class Network(object):
         self.outputs = []
         self.acti_type = ''
         self.error_count = []
-        self.datafile = ""
+        self.datatype = 0
+        self.epoch = 0
 
     def setup(self):
         self.nb_couches = int(input("Nombre de couches : "))
@@ -44,8 +45,8 @@ class Network(object):
         for i in range(self.nb_couches):  # Passe a chaque couche
             for j in range(self.nb_unit_par_couche[i + 1]):  # Passe par chaque unité de cette couche
                 for k in range(self.nb_unit_par_couche[i] + 1):
-                    weight_val = randint(-5, 5)
-                    self.couches[i][j].weights[k] = float(weight_val)
+                    weight_val = float(randint(-100, 100)) / 100
+                    self.couches[i][j].weights[k] = weight_val
 
     def predict(self):
         for j in range(self.nb_unit_par_couche[1]):  # Passe par chaque unité de la 1ere couche
@@ -96,6 +97,7 @@ class Network(object):
                     else:
                         prev_input.append(self.couches[i - 1][k].acti)
 
-                w = self.couches[i][j].update_weights(prev_input)
+                w = self.couches[i][j].update_weights(prev_input, self.epoch)
+
 
                 # print("Poids couche " + str(i) + " / unité " + str(j) + " : " + str(w))
