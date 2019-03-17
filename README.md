@@ -45,6 +45,8 @@ Pour valider l'entrainement du réseau de neuronnes on utilise trois types de do
 
 ### Prérequis
 
+Note : Un script d'installation est fournie dans le .zip (windows only) sous le nom de Install_Package.bat les détails sont dans la section installation plus bas.
+
 
   * [Python 3.5](https://www.python.org/downloads/release/python-370/)
 
